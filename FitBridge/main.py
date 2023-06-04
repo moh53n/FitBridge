@@ -129,7 +129,7 @@ def auth(conf_dir):
 
 def register_datasources(credentials):
     heart_rate_reg_json = """{
-    "dataStreamName": "FitBridge",
+    "dataStreamName": "FitBridgge",
     "type": "derived",
     "application": {
       "detailsUrl": "https://github.com/moh53n/FitBridge",
@@ -149,7 +149,7 @@ def register_datasources(credentials):
   }"""
     
     steps_reg_json = """{
-    "dataStreamName": "FitBridge",
+    "dataStreamName": "FitBridgge",
     "type": "derived",
     "application": {
       "detailsUrl": "https://github.com/moh53n/FitBridge",
