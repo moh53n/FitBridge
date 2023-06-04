@@ -269,6 +269,7 @@ def config_check(conf_dir):
 def main():
     if "--help" in sys.argv or "-h" in sys.argv:
         print("\n\tFitBridge [ARGS]\n\n\t\t-h/--help  \tShow this message\n\t\t--get-token\tGet a Bearer token from Google API service and exit\n")
+        return True
 
     conf_dir = appdirs.user_config_dir("FitBridge")
 
