@@ -1,0 +1,20 @@
+{
+    "dataStreamName": "FitBridge",
+    "type": "derived",
+    "application": {
+      "detailsUrl": "https://github.com/moh53n/FitBridge",
+      "name": "FitBridge",
+      "version": "1"
+    },
+    "dataType": {
+      "name": "com.google.heart_rate.bpm"
+    },
+    "device": {
+      "manufacturer": "FitBridge",
+      "model": "FitBridge",
+      "type": "tablet",
+      "uid": "1",
+      "version": "1.0"
+    }
+  }
+  
