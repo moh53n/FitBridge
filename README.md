@@ -1,10 +1,12 @@
 # FitBridge
 --WIP--    
-Simple script to sync Gadgetbridge exported data to Google Fit 
+A simple script to sync Gadgetbridge exported data to Google Fit. Currently, only the Mi Band data is supported.
 
 ## Install and Usage
 
 This project is not recommended for normal users because it's not user friendly at all. I strongly suggest to only use this script if you know what you're doing.   
+    
+**You can install and run this script in Termux.**    
     
 1. Go to the [Google API Console](https://console.cloud.google.com/flows/enableapi?apiid=fitness).    
 2. Select a project, or create a new one.    
@@ -17,7 +19,7 @@ This project is not recommended for normal users because it's not user friendly 
 ```
 pip install FitBridge
 ```    
-9. Run the script:
+9. Run the script for the initial setup:
 ```
 $ FitBridge 
 
@@ -32,4 +34,14 @@ The steps DataSource successfully registered: XXX
 The heart_rate DataSource successfully registered:: XXX
 
 Done!
+```
+10. After the initial setup is done, You can sync the new data from the Gadgetbridge exported database by simply running the script again (Only the unsynced data will be synced):
+```
+$ FitBridge
+Steps: Read 10 Rows
+Steps: The dataset was successfully inserted.
+Steps: The latest timestamp inserted is 1685964790
+Heart Rate: Read 96 Rows
+Heart Rate: The dataset was successfully inserted.
+Heart Rate: The latest timestamp inserted is 1685964970
 ```
