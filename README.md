@@ -1,4 +1,7 @@
 # FitBridge
+[![PyPI](https://img.shields.io/pypi/v/FitBridge)](https://pypi.org/project/FitBridge/)
+[![Downloads](https://static.pepy.tech/badge/fitbridge)](https://pepy.tech/project/fitbridge)
+![GitHub](https://img.shields.io/github/license/moh53n/FitBridge?color=black)    
 --WIP--    
 A simple script to sync Gadgetbridge exported data to Google Fit. Currently, only the Mi Band data is supported.
 
