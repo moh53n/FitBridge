@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="FitBridge",
-    version="0.1",
+    version="0.2",
     author="Mohsen Tahmasebi",
     author_email="moh53n@moh53n.ir",
     description="A simple script to sync Gadgetbridge exported data to Google Fit",
