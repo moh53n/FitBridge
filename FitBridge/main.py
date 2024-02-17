@@ -56,13 +56,19 @@ def add_data_to_google_fit(type: int, conf_dir, session, config):
 
     data_points = []
 
-    for row in rows:
-        timestamp = row[0]
-        data = row[1]
+    row_len = len(rows)
+    for i in range(row_len):
+        timestamp = rows[i][0]
+        data = rows[i][1]
+
+        if i < row_len - 1:
+            next_timestamp = rows[i + 1][0] - 1
+        else:
+            next_timestamp = timestamp + 60
 
         data_point = {
             "startTimeNanos": timestamp * 1000000000,
-            "endTimeNanos": (timestamp + 10) * 1000000000,
+            "endTimeNanos": (next_timestamp) * 1000000000,
             "dataTypeName": dataTypeName,
             "originDataSourceId": "",
             "value": [
