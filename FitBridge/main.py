@@ -129,7 +129,11 @@ def auth(conf_dir):
             pickle.dump(credentials, f)
 
     if not credentials.valid or credentials.expired:
-        credentials.refresh(Request())
+        try:
+            credentials.refresh(Request())
+        except:
+            os.remove(os.path.join(conf_dir, "token.pickle"))
+            return auth(conf_dir)
 
     return credentials
 
