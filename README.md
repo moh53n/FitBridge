@@ -2,7 +2,8 @@
 [![PyPI](https://img.shields.io/pypi/v/FitBridge)](https://pypi.org/project/FitBridge/)
 [![Downloads](https://static.pepy.tech/badge/fitbridge)](https://pepy.tech/project/fitbridge)
 ![GitHub](https://img.shields.io/github/license/moh53n/FitBridge?color=black)    
-NOTE from Google: The Google Fit APIs, including the Google Fit REST API, will no longer be available after June 30, 2025. As of May 1, 2024, developers cannot sign up to use these APIs.     
+**NOTE from Google: The Google Fit APIs, including the Google Fit REST API, will no longer be available after June 30, 2025. As of May 1, 2024, developers cannot sign up to use these APIs.**     
+--    
 A simple script to sync Gadgetbridge exported data to Google Fit. Currently, only the Mi Band data is supported.
 
 ## Install and Usage
