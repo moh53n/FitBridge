@@ -9,6 +9,7 @@ import appdirs
 import configparser
 import shutil
 import sys
+from datetime import datetime
 
 #TODO: Fix this garbage code style and merge two functions
 
@@ -109,7 +110,7 @@ def add_data_to_google_fit(type: int, conf_dir, session, config):
         print(f"The dataset insertion failed: {response.status_code} {response.reason} {response.text}")
 
 
-    print(f"{name}: The latest timestamp inserted is {latest_timestamp}")
+    print(f"{name}: The latest timestamp inserted is {datetime.fromtimestamp(latest_timestamp)} (UTC)")
 
 def auth(conf_dir):
     scope = ["https://www.googleapis.com/auth/fitness.activity.write", "https://www.googleapis.com/auth/fitness.activity.read",
