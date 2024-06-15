@@ -102,15 +102,15 @@ def add_data_to_google_fit(type: int, conf_dir, session, config):
     latest_timestamp = end_time // 1000000000
 
     if response.status_code == 200:
-        print(f"{name}: The dataset was successfully inserted.")
+        print(f"{name}: dataset inserted successfully.")
 
         with open(latest_timestamp_file_name, "w+") as f:
             f.write(str(latest_timestamp))
     else:
-        print(f"The dataset insertion failed: {response.status_code} {response.reason} {response.text}")
+        print(f"dataset insertion failed: {response.status_code} {response.reason} {response.text}")
 
 
-    print(f"{name}: The latest timestamp inserted is {datetime.fromtimestamp(latest_timestamp)} (UTC)")
+    print(f"{name}: latest inserted timestamp is {datetime.fromtimestamp(latest_timestamp)} (UTC)")
 
 def auth(conf_dir):
     scope = ["https://www.googleapis.com/auth/fitness.activity.write", "https://www.googleapis.com/auth/fitness.activity.read",
@@ -191,12 +191,12 @@ def register_datasources(credentials):
                   data=steps_reg_json)
     if (steps_reg_res.status_code == 200 or steps_reg_res.status_code == 201):
         steps_ds_id = json.loads(steps_reg_res.text)['dataStreamId']
-        print(f"The steps DataSource was successfully registered: {steps_ds_id}")
+        print(f"steps DataSource registered successfully: {steps_ds_id}")
     elif (steps_reg_res.status_code == 409):
         steps_ds_id = json.loads(steps_reg_res.text)['error']['message'].split(' ')[2]
-        print(f"The steps DataSource already existing: {steps_ds_id}")
+        print(f"steps DataSource already exists: {steps_ds_id}")
     else:
-        print(f"The steps DataSource registering failed: {steps_reg_res.status_code} {steps_reg_res.reason} {steps_reg_res.text}")
+        print(f"steps DataSource registration failed: {steps_reg_res.status_code} {steps_reg_res.reason} {steps_reg_res.text}")
         return False
 
     heart_rate_reg_res = requests.post(url="https://www.googleapis.com/fitness/v1/users/me/dataSources", 
@@ -204,12 +204,12 @@ def register_datasources(credentials):
                   data=heart_rate_reg_json)
     if (heart_rate_reg_res.status_code == 200 or heart_rate_reg_res.status_code == 201):
         heartrate_ds_id = json.loads(heart_rate_reg_res.text)['dataStreamId']
-        print(f"The heart_rate DataSource was successfully registered: {heartrate_ds_id}")
+        print(f"heart_rate DataSource registered successfully: {heartrate_ds_id}")
     elif (heart_rate_reg_res.status_code == 409):
         heartrate_ds_id = json.loads(heart_rate_reg_res.text)['error']['message'].split(' ')[2]
-        print(f"The heart_rate DataSource already existing: {heartrate_ds_id}")
+        print(f"heart_rate DataSource already exists: {heartrate_ds_id}")
     else:
-        print(f"The heart_rate DataSource registering failed: {heart_rate_reg_res.status_code} {heart_rate_reg_res.reason} {heart_rate_reg_res.text}")
+        print(f"heart_rate DataSource registration failed: {heart_rate_reg_res.status_code} {heart_rate_reg_res.reason} {heart_rate_reg_res.text}")
         return False
     
     return(steps_ds_id, heartrate_ds_id)

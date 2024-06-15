@@ -33,8 +33,8 @@ Enter the path to the client_secret.json file: PATH_TO_CLIENT_SECRET
 Enter the path to the Exported GadgetBridge database file: PATH_TO_GB_DB
 
 Adding DataSources to the API automatically? (If not, you have to create them manually and add data_source_ids to the config) (y/n): y
-The steps DataSource successfully registered: XXX
-The heart_rate DataSource successfully registered:: XXX
+steps DataSource registered successfully: XXX
+heart_rate DataSource registered successfully: XXX
 
 Done!
 ```
@@ -42,9 +42,9 @@ Done!
 ```
 $ FitBridge
 Steps: Read 10 Rows
-Steps: The dataset was successfully inserted.
-Steps: The latest timestamp inserted is 1685964790
+Steps: dataset inserted successfully.
+Steps: latest inserted timestamp is 2023-06-04 18:34:20 (UTC)
 Heart Rate: Read 96 Rows
-Heart Rate: The dataset was successfully inserted.
-Heart Rate: The latest timestamp inserted is 1685964970
+Heart Rate: dataset inserted successfully.
+Heart Rate: latest inserted timestamp is 2023-06-04 18:34:20 (UTC)
 ```
